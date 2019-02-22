@@ -3,10 +3,14 @@
     <%= link_to "NML Cocktails", cocktails_path %>
   </div>
 
-  <div class="form-inline">
+  <div class="form-inline header-form">
     <%= simple_form_for(@new_cocktail) do |f| %>
-      <%= f.input :name, label: false %>
-      <%= f.submit class: "btn btn-xs btn-default" %>
+      <%= f.input :name, class: "form-field", label: false, placeholder: "New cocktail name" %>
+      <% f.input :photo %><i class="fas fa-upload fa-lg"></i>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= button_tag f.submit, class: "button" do %>
+        <i class="fas fa-cocktail fa-lg"></i>
+      <% end %>
     <% end %>
   </div>
 </header>

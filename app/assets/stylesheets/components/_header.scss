@@ -1,6 +1,6 @@
 header {
   height: 80px;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,4 +11,27 @@ header .logo {
   font-size: 50px;
   font-family: $headers-font;
   color: $light-gray;
+  flex-grow: 1;
+
+  &:hover{
+    text-decoration: none;
+    color: $gray;
+  }
+}
+
+header .header-form {
+  display: flex;
+  align-items: center;
+}
+
+header .button {
+  color: $light-gray;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+
+  &:hover{
+    text-decoration: none;
+    color: $gray;
+  }
 }

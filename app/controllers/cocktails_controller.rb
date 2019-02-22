@@ -3,11 +3,13 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
+    @new_cocktail = Cocktail.new
   end
 
   def show
     @dose = Dose.new
     @review = Review.new
+    @new_cocktail = Cocktail.new
   end
 
   def new

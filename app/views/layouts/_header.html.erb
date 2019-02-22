@@ -1,0 +1,12 @@
+<header>
+  <div class="logo">
+    <%= link_to "NML Cocktails", cocktails_path %>
+  </div>
+
+  <div class="form-inline">
+    <%= simple_form_for(@new_cocktail) do |f| %>
+      <%= f.input :name, label: false %>
+      <%= f.submit class: "btn btn-xs btn-default" %>
+    <% end %>
+  </div>
+</header>

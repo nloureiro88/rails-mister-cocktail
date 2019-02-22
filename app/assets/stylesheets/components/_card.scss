@@ -1,0 +1,51 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: left;
+  margin: 30px 0;
+}
+
+.cocktail-card {
+  background-color: black;
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  background-attachment: fixed;
+  color: $light-gray;
+  box-shadow: 2px 2px 2px $gray;
+  height: 200px;
+  width: 350px;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+
+  h4 {
+    font-family: $headers-font;
+    position: absolute;
+    text-shadow: 0.5px 0.5px $light-gray;
+  }
+
+  ul {
+    color: $light-gray;
+    position: absolute;
+    bottom: 1px;
+    padding-left: 0;
+  }
+
+  li {
+    font-size: 12px;
+    list-style: none;
+    text-shadow: 0.5px 0.5px $light-gray;
+    text-align: left;
+  }
+
+  p {
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    text-shadow: 0.5px 0.5px $light-gray;
+    text-align: right;
+  }
+}

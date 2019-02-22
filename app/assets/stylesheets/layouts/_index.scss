@@ -3,3 +3,21 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
+
+body {
+  background: #b92b27; /* fallback for old browsers */
+  background: -webkit-linear-gradient(left, #b92b27, #1565c0);
+  background: -o-linear-gradient(left, #b92b27, #1565c0);
+  background: linear-gradient(to right, #b92b27, #1565c0); /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: $body-font;
+  color: $blue;
+}
+
+a {
+  color: $light-gray;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    color: $gray;
+  }
+}

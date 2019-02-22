@@ -12,3 +12,31 @@
 # dose.ingredient = ing
 # dose.cocktail = cock
 # dose.save!
+
+Ingredient.destroy_all
+Cocktail.destroy_all
+Dose.destroy_all
+
+filepath = 'db/ingredients.json'
+serialized = File.read(filepath)
+ingredients = JSON.parse(serialized)
+ingredients["drinks"].each do |ingredient|
+  # puts ingredient["strIngredient1"]
+  Ingredient.create!(name: ingredient["strIngredient1"])
+end
+p Ingredient.all
+
+Cocktail.create!(name: "Caipirona")
+Cocktail.create!(name: "Caipirona Plus")
+Cocktail.create!(name: "Caipirona Plus Plus")
+p Cocktail.all
+
+Cocktail.all.each do |cock|
+  3.times do
+    dose = Dose.new(description: Random.rand(20..200).to_s + "ml")
+    dose.ingredient = Ingredient.find(Random.rand(0..Ingredient.count - 1))
+    dose.cocktail = cock
+    dose.save!
+    puts dose
+  end
+end
